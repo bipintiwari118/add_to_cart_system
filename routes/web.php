@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +43,4 @@ route::get('/product/remove', [CartController::class, 'removeAll'])->name('all.r
 
 
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+route::get('/contact', [HomeController::class, 'index'])->name('contact');

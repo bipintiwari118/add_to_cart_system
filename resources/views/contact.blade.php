@@ -42,6 +42,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
+                    @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h3 class="text-center mb-4">Contact Us</h3>
