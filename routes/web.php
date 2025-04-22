@@ -44,3 +44,4 @@ route::get('/product/remove', [CartController::class, 'removeAll'])->name('all.r
 
 
 route::get('/contact', [HomeController::class, 'index'])->name('contact');
+route::post('/contact', [HomeController::class, 'submitToMail'])->name('send.contact.form');
