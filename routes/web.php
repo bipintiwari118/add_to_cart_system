@@ -37,3 +37,10 @@ route::get('/add/quantity/{productId}', [CartController::class, 'addQuantity'])-
 route::get('/sub/quantity/{productId}', [CartController::class, 'subQuantity'])->name('sub.quantity');
 route::get('/product/remove/{productId}', [CartController::class, 'cartRemove'])->name('cart.remove');
 route::get('/product/remove', [CartController::class, 'removeAll'])->name('all.remove');
+
+
+
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
